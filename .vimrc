@@ -1,7 +1,7 @@
 if has ("syntax")
     syntax on
 endif
-colorscheme onehalfdark
+colorscheme default
 set hlsearch
 set incsearch
 set autoindent
@@ -28,9 +28,14 @@ endfunction
 " set cursor position to last closed cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+" highlight color setting
+hi Search term=standout ctermfg=0 ctermbg=10
+hi! Visual cterm=none ctermfg=none ctermbg=242
+highlight clear StatusLine
+hi! StatusLine ctermfg=242 ctermbg=black
+
 " cscope database setting
 cs add ~/cscope/cscope.out
-" hi Search term=standout ctermfg=0 ctermbg=3 guifg=Black guibg=Yellow
 nnoremap <F1> :cs add ~/cscope/cscope.out<CR>
 nnoremap <F5> :cs find g <cword><CR>
 nnoremap <F4> :cs find c <cword><CR>
