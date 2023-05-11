@@ -1,7 +1,7 @@
 if has ("syntax")
     syntax on
 endif
-colorscheme default
+colorscheme onehalfdark
 set hlsearch
 set incsearch
 set autoindent
@@ -29,10 +29,10 @@ endfunction
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " highlight color setting
-hi Search term=standout ctermfg=0 ctermbg=10
-hi! Visual cterm=none ctermfg=none ctermbg=242
-highlight clear StatusLine
-hi! StatusLine ctermfg=242 ctermbg=black
+" hi Search term=standout ctermfg=0 ctermbg=10
+" hi! Visual cterm=none ctermfg=none ctermbg=242
+" highlight clear StatusLine
+" hi! StatusLine ctermfg=242 ctermbg=black
 
 " cscope database setting
 cs add ~/cscope/cscope.out
