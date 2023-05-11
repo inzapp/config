@@ -1,7 +1,7 @@
 [core]
     editor = vi
     autocrlf = input
-    whitespace = cr-at-eol
+    eol = lf
 [init]
     defaultBranch = master
 [pull]
