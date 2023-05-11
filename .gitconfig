@@ -1,5 +1,7 @@
 [core]
     editor = vi
+[init]
+    defaultBranch = master
 [pull]
     rebase = true
 [diff]
