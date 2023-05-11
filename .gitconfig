@@ -1,5 +1,7 @@
 [core]
     editor = vi
+    autocrlf = true
+    whitespace = cr-at-eol
 [init]
     defaultBranch = master
 [pull]
