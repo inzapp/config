@@ -1,6 +1,6 @@
 [core]
     editor = vi
-    autocrlf = true
+    autocrlf = input
     whitespace = cr-at-eol
 [init]
     defaultBranch = master
