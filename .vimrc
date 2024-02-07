@@ -10,6 +10,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set fileencoding=utf8
+set wildmenu
+set wildmode=longest:full,full
 
 " visual bell off in git bash terminal
 set t_vb=
@@ -53,3 +55,9 @@ nnoremap <S-l> <Nop>
 nnoremap & <Nop>
 nnoremap ( <Nop>
 nnoremap ) <Nop>
+
+" tab key setting
+map th :tabprev<CR>
+map tl :tabnext<CR>
+map tn :tabnew %<CR>
+map td :tabclose<CR>
