@@ -61,3 +61,5 @@ map th :tabprev<CR>
 map tl :tabnext<CR>
 map tn :tabnew %<CR>
 map td :tabclose<CR>
+map t[ :tabmove-<CR>
+map t] :tabmove+<CR>
