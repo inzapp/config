@@ -124,3 +124,9 @@ complete -E -F empty_command_completion
 
 # enable symlink in git bash terminal(Administrator only)
 export MSYS=winsymlinks:nativestrict
+
+dmesg_time() {
+    date -d  "@$(echo "$(date -d "$(uptime -s)" +%s) + $1" | bc)"
+}
+
+alias dcnt='find . -maxdepth 1 -type d -exec sh -c "echo {} && find {} -type f | wc -l && echo" \;'
