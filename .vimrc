@@ -52,6 +52,14 @@ nnoremap <S-h> <Nop>
 nnoremap <S-j> <Nop>
 nnoremap <S-k> <Nop>
 nnoremap <S-l> <Nop>
+vnoremap <S-h> <Nop>
+vnoremap <S-j> <Nop>
+vnoremap <S-k> <Nop>
+vnoremap <S-l> <Nop>
+xnoremap <S-h> <Nop>
+xnoremap <S-j> <Nop>
+xnoremap <S-k> <Nop>
+xnoremap <S-l> <Nop>
 nnoremap gn <Nop>
 nnoremap & <Nop>
 nnoremap ( <Nop>
