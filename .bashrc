@@ -130,3 +130,4 @@ dmesg_time() {
 }
 
 alias dcnt='find . -maxdepth 1 -type d -exec sh -c "echo {} && find {} -type f | wc -l && echo" \;'
+alias cb='xclip -selection clipboard'
