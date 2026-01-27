@@ -48,7 +48,7 @@ nnoremap <F4> :cs find c <cword><CR>
 nnoremap <F5> :exec "tjump " . expand("<cword>")<CR>
 nnoremap <F8> :cs kill -1<CR>
 nnoremap <F9> :!find . -name '*.c' -o -name '*.h' -o -name '*.cpp' -o -name '*.hpp' -o -name '*.py' > ./cscope.filelist && cscope -bq -i ./cscope.filelist && ctags -L ./cscope.filelist && rm ./cscope.filelist<CR>
-nnoremap <F12> :exec "cs add ./cscope.out . -C"<Bar>exec "set tags=./tags"<CR>
+nnoremap <F12> :exec "cs add ./cscope.out . -C"<Bar>exec "set tags=tags"<CR>
 
 " ignore key setting
 nnoremap <S-h> <Nop>
