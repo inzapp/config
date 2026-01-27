@@ -41,7 +41,7 @@ set cscopetag
 set csto=0
 set tags=~/cscope/tags
 cs add ~/cscope/cscope.out . -C
-nnoremap <F1> :cs add ~/cscope/cscope.out . -C<Bar>set tags=~/cscope/tags<CR>
+nnoremap <F1> :exec "cs add ~/cscope/cscope.out . -C"<Bar>exec "set tags=~/cscope/tags"<CR>
 nnoremap <F2> :cs find f 
 nnoremap <F3> :cs find s <cword><CR>
 nnoremap <F4> :cs find c <cword><CR>
