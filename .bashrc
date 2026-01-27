@@ -131,3 +131,5 @@ dmesg_time() {
 
 alias dcnt='find . -maxdepth 1 -type d -exec sh -c "echo {} && find {} -type f | wc -l && echo" \;'
 alias cb='xclip -selection clipboard'
+alias codex='codex --ask-for-approval on-request'
+alias gemini='GEMINI_API_KEY=$(pass gemini_api_key) npx https://github.com/google-gemini/gemini-cli'

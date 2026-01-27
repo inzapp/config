@@ -36,16 +36,19 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " highlight clear StatusLine
 " hi! StatusLine ctermfg=242 ctermbg=black
 
-" cscope database setting
+" cscope/ctags setting
+set cscopetag
+set csto=0
+set tags=~/cscope/tags
 cs add ~/cscope/cscope.out . -C
-nnoremap <F1> :cs add ~/cscope/cscope.out . -C<CR>
-nnoremap <F5> :cs find g <cword><CR>
-nnoremap <F4> :cs find c <cword><CR>
-nnoremap <F3> :cs find s <cword><CR>
+nnoremap <F1> :cs add ~/cscope/cscope.out . -C<Bar>set tags=~/cscope/tags<CR>
 nnoremap <F2> :cs find f 
-nnoremap <F8> :cs kill 0<CR>:cs kill 1<CR>:cs kill 2<CR>cs kill 3<CR>cs kill 4<CR>cs kill 5<CR>cs kill 6<CR>cs kill 7<CR>cs kill 8<CR>cs kill 9<CR>
-nnoremap <F9> :!find . -name '*.c' -o -name '*.h' -o -name '*.cpp' -o -name '*.hpp' -o -name '*.py' > ./cscope.filelist && cscope -bqki ./cscope.filelist && rm ./cscope.filelist<CR>
-nnoremap <F12> :cs add ./cscope.out . -C<CR>
+nnoremap <F3> :cs find s <cword><CR>
+nnoremap <F4> :cs find c <cword><CR>
+nnoremap <F5> :exec "tjump " . expand("<cword>")<CR>
+nnoremap <F8> :cs kill -1<CR>
+nnoremap <F9> :!find . -name '*.c' -o -name '*.h' -o -name '*.cpp' -o -name '*.hpp' -o -name '*.py' > ./cscope.filelist && cscope -bq -i ./cscope.filelist && ctags -L ./cscope.filelist && rm ./cscope.filelist<CR>
+nnoremap <F12> :exec "cs add ./cscope.out . -C"<Bar>exec "set tags=./tags"<CR>
 
 " ignore key setting
 nnoremap <S-h> <Nop>
